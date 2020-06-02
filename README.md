@@ -7,30 +7,28 @@
 Team 2 - Mangaliso Samuel Makhoba, Bryan Green, Michael Ilic, Lawrence Hlapa, Faatimah Mansoor 
 **The structure of this notebook is as follows:**
 
-[**1 Introduction**](#Introduction)
+[**1 Introduction**](##1-introduction)
 
 
+[**2 Body**](##2-body)
 
+>[2.1 Import modules](#21-import-modules)
 
-[**2 Body**](#Body)
+>[2.2 Import dataset](#22-import-dataset)
 
->[2.1 Import modules](#Import_modules)
+>[2.3 EDA](#23-eda)
 
->[2.2 Import dataset]
+>[2.4 Modelling](#24-modelling)
 
->[2.3 EDA]
+>[2.5 Model selection](#25-model-selection)
 
->[2.4 Modelling]
+>[2.6 Using model on Test](#26-using-model-on-test)
 
->[2.5 Model selection]
+>[2.7 Functions to be placed in API](#functions-to-be-placed-in-api)
 
->[2.6 Using model on Test]
+[**3 Conclusion**](#3-conclusion)
 
->[2.7 Functions to be placed in API]
-
-[**3 Conclusion**](#Conclusion)
-
-[**4 References and links**](#References_and_links)
+[**4 References and links**](#4-references-and-links)
 
 ##**1 Introduction**
 <a id="Introduction"></a>
