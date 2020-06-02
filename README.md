@@ -22,7 +22,7 @@ Team 2 - Mangaliso Samuel Makhoba, Bryan Green, Michael Ilic, Lawrence Hlapa, Fa
 
 >[2.5 Model selection](#25-model-selection)
 
->[2.6 Functions to be placed in API](#functions-to-be-placed-in-api)
+>[2.6 Analysis](#analysis)
 
 [**3 Conclusion**](#3-conclusion)
 
@@ -122,6 +122,15 @@ The moment we’ve all been waiting for!
 
 We trained 6 different regression models and discovered that CatBoostRegressor returned the highest score, with a value of 720.82.
 
+### 2.6 Analysis
+
+- RMSE was used to select the best model 
+- CatBoostRegressor provided the best RMSE score of 720.82
+- We found that temperature had no effect on the delivery time
+
+### 2.6 Conclusion
+
+After testing 6 different models, CatBoostRegressor proved to be the most effective at accurately predicting delivery time.
 
 
 
