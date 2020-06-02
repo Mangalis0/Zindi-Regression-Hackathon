@@ -39,90 +39,91 @@ To build this model, the Train dataset and the riders dataset will used. Regress
 ## 2. Body
 
 
-### 2.1 EDA
+### 2.1 Import modules
 
-*Categorical variables
+  Modules to be imported in jupyter notebook:
+      import modules 
+      import numpy as np 
+      import pandas as pd
+      import matplotlib.pyplot as plt 
+      %matplotlib inline 
+      import seaborn as sns
+      import plotly.express as px
+      import math
 
-   Vehicle type(although there is only one- bike)
-   Platform type
-   Personal or Business, referring to the business type
-   Date and day - however they should be represented as cyclical
-   
-*Ratio variable 
-   Temperature 
+### 2.2 Dataset
+
+##### Description of files in datasets:
+
+Train - Dataset training our model
+  train = pd.read_csv('/content/Train.csv')
+  
+Test - Dataset testing our model (y variables to be predicted)
+  test = pd.read_csv('/content/Test.csv')
+  
+Riders - Riders info
+  riders = pd.read_csv('/content/Riders.csv')
+  
+Variable Definitions - Info about columns and there values  
+  variable_def = pd.read_csv('/content/VariableDefinitions.csv')
+Sample - Sample results of competition
+  sample = pd.read_csv('/content/SampleSubmission.csv')
+  
+NB: We used jupyter notebook to run codes to import.
+
+### 2.3 EDA
+
+#### Categorical variables
+
+  - Vehicle type (although there is only one - "bike")
+  - Platform type
+  - Personal or Business, referring to the business type
+  - Date and day - however they should be represented as cyclical 
+  
+#### Ratio variable
+
+  - Temperature
+  
+#### List of graphs created to explore data included in our notebook:
+
+  - Figure 1. Number of missing values: null values per variable in the 'train' dataset.
+  - Figure 2. Temperature distribution: temperature distribution from the'train'      dataset.
+  - Figure 3. Overall data distribution: distribution of each of the variables in the 'train' dataset, including the y variable (Time from pickup to arrival)
+  - Figure 4. Checking correlations: correlations heat map for the variables in the 'train' dataset.
+  - Figure 5. Time from pickup to arrival: graphical representation of the distribution of pickup location.
+  
+  ### 2.4 Modelling
+  
+  #### 2.4.1 Preprocessing
+  
+  We started by analyzing the data and finding the columns that had too many missing values, or had no relevance to the final prediction.
+  
+  #### 2.4.2 Splitting data
+  
+  The next step was to split the data into the train and test sets, in order to prevent overfitting and to validate the effectiveness of the model.
+  
+  #### 2.4.3 Applying a cleaner function
+  
+  We built a custom cleaner function to drop nulls and format the data in a way that made it usable for model training.
+  
+  #### 2.4.4 Cross validation
+  
+  We applied cross validation to confirm that the data was valid and finally ready for training. 
+  
+  #### 2.4.5 Model pipeline
+  
+  The moment we’ve all been waiting for!
+
+We trained 6 different regression models and discovered that CatBoostRegressor returned the highest score, with a value of 720.82.
+
+  
+  
+  
+  
+  
+  
+  
 
 
-Models
-import modules 
-import numpy as np 
-import pandas as pd
-import matplotlib.pyplot as plt 
-%matplotlib inline 
-import seaborn as sns
-import plotly.express as px
-import math
-
-###2.2 Import dataset
-
-#if using google colab,run this cell to import data 
-train = pd.read_csv('/content/Train.csv') #training set
-test = pd.read_csv('/content/Test.csv') #testing set(y variable to be predicted)
-riders = pd.read_csv('/content/Riders.csv') #riders info
-variable_def = pd.read_csv('/content/VariableDefinitions.csv')
-sample = pd.read_csv('/content/SampleSubmission.csv') #sample of competition submission, should have order no for testing set, and y predicted from model
-
-
-#if using jupyter notebook, run this cell to import data
-train = pd.read_csv('Train.csv') #training set
-test = pd.read_csv('Test.csv') #testing set(y variable to be predicted)
-riders = pd.read_csv('Riders.csv') #riders info
-variable_def = pd.read_csv('VariableDefinitions.csv')
-sample = pd.read_csv('SampleSubmission.csv') #sample of competition submission, should have order no for testing set, and y predicted from model
-
-###2.3 EDA
-
-**Variable** **definitions**
-
-variable_def
-
-**Riders EDA**
-
-riders.head()
-
-riders.info()
-
-riders.isnull().sum(axis = 0) #number of nulls per column 
-
-
-# Riders Number Of Ratings Vs Number Of Orders
-
-from matplotlib import rc
-
-rc('mathtext', default='regular')
-# Create Empty figure
-build = plt.figure(figsize=(22,15))
-
-# Split Figure To Allow Two Sets Of Y Axes
-axes1 = build.add_subplot(111)
-
-# Plot The First Line On Its Axis
-axes1.plot(np.arange(len(riders["No_of_Ratings"])), riders["No_of_Ratings"], '-', label = "No_of_Ratings", color='red')
-
-# Create Second Y Axis And Plot Second Line
-axes2 = axes1.twinx()
-axes2.plot(np.arange(len(riders["No_Of_Orders"])), riders["No_Of_Orders"], '-', label = "No_Of_Orders")
-
-# Add Legends For Each Axis
-axes1.legend(loc=2)
-axes2.legend(loc=9)
-
-axes1.grid()
-
-# Set Labels Of Axes
-axes1.set_xlabel("Riders")
-axes1.set_ylabel("Number Of Ratings")
-axes2.set_ylabel("Number Of Orders")
-plt.show()
-
-
+  
 
