@@ -128,9 +128,11 @@ We trained 6 different regression models and discovered that CatBoostRegressor r
 - CatBoostRegressor provided the best RMSE score of 720.82
 - We found that temperature had no effect on the delivery time
 
-### 2.6 Conclusion
+## 3. Conclusion
 
 After testing 6 different models, CatBoostRegressor proved to be the most effective at accurately predicting delivery time.
+
+
 
 
 
