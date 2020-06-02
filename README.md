@@ -22,9 +22,7 @@ Team 2 - Mangaliso Samuel Makhoba, Bryan Green, Michael Ilic, Lawrence Hlapa, Fa
 
 >[2.5 Model selection](#25-model-selection)
 
->[2.6 Using model on Test](#26-using-model-on-test)
-
->[2.7 Functions to be placed in API](#functions-to-be-placed-in-api)
+>[2.6 Functions to be placed in API](#functions-to-be-placed-in-api)
 
 [**3 Conclusion**](#3-conclusion)
 
@@ -113,9 +111,22 @@ To build this model, the Train dataset and the riders dataset will used. Regress
   
   #### 2.4.5 Model pipeline
   
-  The moment we’ve all been waiting for!
+  Linear, Lasso and Ridge Regression
+  Decision Tree Regressor
+  Random Forest, Gradient Boosting, Bagging, AdaBoost Regressors
+  XGB, LGBM, Cat Boost Regressors
+
+### 2.5 Model selection
+
+The moment we’ve all been waiting for!
 
 We trained 6 different regression models and discovered that CatBoostRegressor returned the highest score, with a value of 720.82.
+
+
+
+
+
+
 
   
   
