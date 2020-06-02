@@ -30,24 +30,30 @@ Team 2 - Mangaliso Samuel Makhoba, Bryan Green, Michael Ilic, Lawrence Hlapa, Fa
 
 [**4 References and links**](#4-references-and-links)
 
-##**1 Introduction**
-<a id="Introduction"></a>
+## 1. Introduction
 
 Sendy is a logistic company in Kenya. The aim of this project is to build a regression model for Sendy which can accurately predict delivery time, from the time a package is picked up to its arrival at the final destination.
 
 To build this model, the Train dataset and the riders dataset will used. Regression models will be trained, and the most suitable will be selected. This model will then be used to predict delivery time for the test dataset 
 
-**Variable to be predicted(y):** Time_from_Pickup_to_Arrival
+## 2. Body
 
-**Independent variables(X)**:
 
-##**2 Body**
-<a id="Body"></a>
+### 2.1 EDA
 
-###2.1 Import modules
-<a id="Import_modules"></a>
+*Categorical variables
 
-#import modules 
+   Vehicle type(although there is only one- bike)
+   Platform type
+   Personal or Business, referring to the business type
+   Date and day - however they should be represented as cyclical
+   
+*Ratio variable 
+   Temperature 
+
+
+Models
+import modules 
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt 
