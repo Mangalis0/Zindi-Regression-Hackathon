@@ -55,21 +55,22 @@ To build this model, the Train dataset and the riders dataset will used. Regress
 
 ##### Description of files in datasets:
 
-Train - Dataset training our model
+  *Train - Dataset training our model
   train = pd.read_csv('/content/Train.csv')
   
-Test - Dataset testing our model (y variables to be predicted)
+  *Test - Dataset testing our model (y variables to be predicted)
   test = pd.read_csv('/content/Test.csv')
   
-Riders - Riders info
+  *Riders - Riders info
   riders = pd.read_csv('/content/Riders.csv')
   
-Variable Definitions - Info about columns and there values  
+  *Variable Definitions - Info about columns and there values  
   variable_def = pd.read_csv('/content/VariableDefinitions.csv')
-Sample - Sample results of competition
+  
+  *Sample - Sample results of competition
   sample = pd.read_csv('/content/SampleSubmission.csv')
   
-NB: We used jupyter notebook to run codes to import.
+  NB: We used jupyter notebook to run codes to import.
 
 ### 2.3 EDA
 
